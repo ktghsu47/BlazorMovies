@@ -1,0 +1,36 @@
+﻿@page "/person/edit/{PersonId:int}"
+@inject IPersonRepository repo
+@inject NavigationManager nav
+@attribute [Authorize(Roles = "Admin")]
+
+<h3>Edit Person</h3>
+
+@if (Person != null) {
+    <PersonForm Person="Person" OnValidSubmit="Edit" />
+} else {
+    <text>Loading Person...</text>
+}
+
+@code {
+    [Parameter] public int PersonId { get; set; }
+    Person Person;
+
+    protected async override Task OnInitializedAsync() {
+        try {
+            Person = await repo.GetPersonById(PersonId);
+        } catch (Exception ex) {
+            // Show popup message, log into DB, send email to developer
+            Console.WriteLine(ex.Message);
+        }
+    }
+
+    private async Task Edit() {
+        try {
+            await repo.UpdatePerson(Person);
+            nav.NavigateTo("people");
+        } catch (Exception ex) {
+            // Show popup message, log into DB, send email to developer
+            Console.WriteLine(ex.Message);
+        }
+    }
+}

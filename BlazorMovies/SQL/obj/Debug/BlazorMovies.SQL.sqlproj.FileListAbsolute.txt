@@ -1,0 +1,15 @@
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies.SQL\bin\Debug\BlazorMovies.SQL.dacpac
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies.SQL\bin\Debug\BlazorMovies.SQL.dll
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies.SQL\bin\Debug\BlazorMovies.SQL.pdb
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies.SQL\obj\Debug\BlazorMovies.SQL.sqlprojAssemblyReference.cache
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies.SQL\obj\Debug\BlazorMovies.SQL.dll
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies.SQL\obj\Debug\BlazorMovies.SQL.pdb
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\SQL\bin\Debug\BlazorMovies.SQL.dacpac
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\SQL\bin\Debug\BlazorMovies.SQL.dll
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\SQL\bin\Debug\BlazorMovies.SQL.pdb
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\SQL\obj\Debug\Model.xml
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\SQL\obj\Debug\refactor.xml
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\SQL\obj\Debug\postdeploy.sql
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\SQL\obj\Debug\predeploy.sql
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\SQL\obj\Debug\BlazorMovies.SQL.dll
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\SQL\obj\Debug\BlazorMovies.SQL.pdb

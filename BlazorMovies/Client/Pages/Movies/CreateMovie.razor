@@ -1,0 +1,29 @@
+﻿@page "/movies/create"
+@inject NavigationManager nav
+@inject IMovieRepository repoMovie
+@inject IGenreRepository repoGenge
+@attribute [Authorize(Roles = "Admin")]
+
+<h3>Create Movie</h3>
+
+@if (notSelectedGenres != null) {
+    <MovieForm Movie="movie" OnValidSubmit="SaveMovie" NotSelectedGenres="notSelectedGenres" />
+}
+
+@code {
+    protected async override Task OnInitializedAsync() {
+        notSelectedGenres = await repoGenge.GetGenres();
+    }
+
+    private Movie movie = new Movie();
+    private List<Genre> notSelectedGenres;
+    private async Task SaveMovie() {
+        try {
+            var movieId = await repoMovie.CreateMovie(movie);
+            nav.NavigateTo($"movie/{movieId}/{movie.Title.Replace(" ", "-")}");
+        } catch (Exception ex) {
+            // Show popup message, log into DB, send email to developer
+            Console.WriteLine(ex.Message);
+        }
+    }
+}

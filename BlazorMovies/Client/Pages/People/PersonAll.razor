@@ -1,0 +1,63 @@
+﻿@page "/people"
+@inject IPersonRepository repo
+@attribute [Authorize(Roles = "Admin")]
+
+<h3>Index People</h3>
+
+<div class="form-group">
+    <a class="btn btn-info" href="person/create">New Person</a>
+</div>
+
+<GenericList List="People">
+    <WholeListTemplate>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in People) {
+<tr>
+    <td>
+        <a class="btn btn-success" href="/person/edit/@item.Id">Edit</a>
+        <button class="btn btn-danger" @onclick="@(() => DeletePerson(item.Id))">Delete</button>
+    </td>
+    <td>@item.Name</td>
+</tr>                }
+            </tbody>
+        </table>
+    </WholeListTemplate>
+</GenericList>
+
+<Pagination CurrentPage="@PageNumberSizeDTO.PageNumber" TotalAmountPages="pageTotal" SelectedPage="SelectedPage" />
+
+@code { List<Person> People;
+            PageNumberSizeDTO PageNumberSizeDTO = new PageNumberSizeDTO() { PageNumber = 1 };
+            private int pageTotal;
+
+            protected override async Task OnInitializedAsync() {
+                try {
+                    await LoadPeople();
+                } catch (Exception ex) {
+                    // Show popup message, log into DB, send email to developer
+                    Console.WriteLine(ex.Message);
+                }
+            }
+
+            private async Task LoadPeople() {
+                var PagingDTO = await repo.GetPeople(PageNumberSizeDTO);
+                People = PagingDTO.Response;
+                pageTotal = PagingDTO.PageTotal;
+            }
+
+            private async Task SelectedPage(int pageNumber) {
+                PageNumberSizeDTO.PageNumber = pageNumber;
+                await LoadPeople();
+            }
+
+            private async Task DeletePerson(int id) {
+                await repo.DeletePerson(id);
+                await LoadPeople();
+            } }

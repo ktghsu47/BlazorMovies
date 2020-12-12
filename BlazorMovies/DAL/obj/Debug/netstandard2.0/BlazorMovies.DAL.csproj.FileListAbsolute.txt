@@ -1,0 +1,12 @@
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\DAL\bin\Debug\netstandard2.0\BlazorMovies.DAL.deps.json
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\DAL\bin\Debug\netstandard2.0\BlazorMovies.DAL.dll
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\DAL\bin\Debug\netstandard2.0\BlazorMovies.DAL.pdb
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\DAL\bin\Debug\netstandard2.0\BlazorMovies.Shared.dll
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\DAL\bin\Debug\netstandard2.0\BlazorMovies.Shared.pdb
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\DAL\obj\Debug\netstandard2.0\BlazorMovies.DAL.csprojAssemblyReference.cache
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\DAL\obj\Debug\netstandard2.0\BlazorMovies.DAL.AssemblyInfoInputs.cache
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\DAL\obj\Debug\netstandard2.0\BlazorMovies.DAL.AssemblyInfo.cs
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\DAL\obj\Debug\netstandard2.0\BlazorMovies.DAL.csproj.CoreCompileInputs.cache
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\DAL\obj\Debug\netstandard2.0\BlazorMovies.DAL.csproj.CopyComplete
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\DAL\obj\Debug\netstandard2.0\BlazorMovies.DAL.dll
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\DAL\obj\Debug\netstandard2.0\BlazorMovies.DAL.pdb

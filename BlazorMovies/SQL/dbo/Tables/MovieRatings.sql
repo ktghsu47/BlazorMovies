@@ -1,0 +1,8 @@
+﻿CREATE TABLE [dbo].[MovieRatings]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY, 
+    [MovieId] BIT NOT NULL, 
+    [UserId] NVARCHAR(50) NULL, 
+    [Rate] INT NULL, 
+    [RatingDate] DATETIME2 NOT NULL DEFAULT GETDATE()
+)

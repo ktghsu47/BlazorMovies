@@ -1,0 +1,39 @@
+﻿@page "/register"
+@inject IAccountRepository repoAccount
+@inject NavigationManager nav
+@inject ILoginService login
+
+<h3>Register</h3>
+
+<EditForm Model="userInfoDTO" OnValidSubmit="registerUser">
+    <DataAnnotationsValidator />
+
+    <div class="form-group">
+        <label>Email:</label>
+        <div>
+            <InputText class="form-control" @bind-Value="@userInfoDTO.Email" />
+            <ValidationMessage For="@(() => userInfoDTO.Email)" />
+        </div>
+    </div>
+    <div class="form-group">
+        <label>Password:</label>
+        <div>
+            <InputPassword class="form-control" @bind-Value="@userInfoDTO.Password" />
+            <ValidationMessage For="@(() => userInfoDTO.Password)" />
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Register</button>
+</EditForm>
+
+@code {
+    private UserInfoDTO userInfoDTO = new UserInfoDTO();
+
+    private async Task registerUser() {
+        var userToken = await repoAccount.Register(userInfoDTO);
+
+        await login.Login(userToken);
+
+        nav.NavigateTo("");
+    }
+}

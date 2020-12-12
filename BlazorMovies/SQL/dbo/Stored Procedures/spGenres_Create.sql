@@ -1,0 +1,13 @@
+﻿CREATE PROCEDURE [dbo].[spGenres_Create]
+	@Name NVARCHAR(50),
+	@Id INT OUTPUT
+AS
+
+BEGIN
+	SET NOCOUNT ON;
+
+	INSERT INTO dbo.[Genres]([Name])
+	VALUES (@Name);
+
+	SET @Id = SCOPE_IDENTITY();
+END

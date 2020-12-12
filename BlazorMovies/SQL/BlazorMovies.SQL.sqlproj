@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>BlazorMovies.SQL</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{360b9381-7fd2-4989-ac8f-ab71ec5a9bf7}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>BlazorMovies.SQL</RootNamespace>
+    <AssemblyName>BlazorMovies.SQL</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo" />
+    <Folder Include="scripts" />
+    <Folder Include="dbo\Stored Procedures" />
+    <Folder Include="dbo\Tables" />
+    <Folder Include="dbo\Views" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\Genres.sql" />
+    <Build Include="dbo\Tables\Movies.sql" />
+    <Build Include="dbo\Tables\MovieRatings.sql" />
+    <Build Include="dbo\Tables\MovieActors.sql" />
+    <Build Include="dbo\Tables\MovieGenres.sql" />
+    <Build Include="dbo\Tables\People.sql" />
+    <Build Include="dbo\Tables\Roles.sql" />
+    <Build Include="dbo\Stored Procedures\spGenres_All.sql" />
+    <Build Include="dbo\Stored Procedures\spGenres_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\spGenres_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\spGenres_Create.sql" />
+    <Build Include="dbo\Stored Procedures\spGenres_Update.sql" />
+    <Build Include="dbo\Stored Procedures\spMovies_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\spMovieRatings_GetAverage.sql" />
+    <Build Include="dbo\Stored Procedures\spMovieRatings_GetUserRate.sql" />
+    <Build Include="dbo\Stored Procedures\spMovies_InTheaters.sql" />
+    <Build Include="dbo\Stored Procedures\spMovies_Upcoming.sql" />
+    <Build Include="dbo\Stored Procedures\spUsers_Login.sql" />
+    <Build Include="dbo\Stored Procedures\spUsers_Register.sql" />
+    <Build Include="dbo\Stored Procedures\spMovies_GetGenresByMovieId.sql" />
+    <Build Include="dbo\Stored Procedures\spMovies_GetActorsByMovieId.sql" />
+    <Build Include="dbo\Stored Procedures\spMovies_All.sql" />
+    <Build Include="dbo\Stored Procedures\spMovies_Create.sql" />
+    <Build Include="dbo\Stored Procedures\spMovies_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\spMovies_Update.sql" />
+    <Build Include="dbo\Stored Procedures\spMovieActors_Create.sql" />
+    <Build Include="dbo\Stored Procedures\spMovieGenres_Create.sql" />
+    <Build Include="dbo\Stored Procedures\spUsers_All.sql" />
+    <Build Include="dbo\Stored Procedures\spMovieRatings_Create.sql" />
+    <Build Include="dbo\Stored Procedures\spMovieRatings_Update.sql" />
+    <Build Include="dbo\Stored Procedures\spUsers_Delete.sql" />
+    <Build Include="dbo\Stored Procedures\spUsers_Create.sql" />
+    <Build Include="dbo\Stored Procedures\spUsers_GetById.sql" />
+    <Build Include="dbo\Stored Procedures\spUsers_Search.sql" />
+    <Build Include="dbo\Stored Procedures\spUsers_Update.sql" />
+    <Build Include="dbo\Stored Procedures\spRoles_All.sql" />
+    <Build Include="dbo\Stored Procedures\spRoles_Create.sql" />
+    <Build Include="dbo\Stored Procedures\spRoles_Delete.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <RefactorLog Include="BlazorMovies.SQL.refactorlog" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="scripts\Script.PostDeployment.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BlazorMovies.SQL.publish.xml" />
+  </ItemGroup>
+</Project>

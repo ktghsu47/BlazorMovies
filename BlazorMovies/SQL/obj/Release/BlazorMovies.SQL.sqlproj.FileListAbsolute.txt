@@ -1,0 +1,9 @@
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\SQL\bin\Release\BlazorMovies.SQL.dacpac
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\SQL\bin\Release\BlazorMovies.SQL.dll
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\SQL\bin\Release\BlazorMovies.SQL.pdb
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\SQL\obj\Release\Model.xml
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\SQL\obj\Release\refactor.xml
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\SQL\obj\Release\postdeploy.sql
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\SQL\obj\Release\predeploy.sql
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\SQL\obj\Release\BlazorMovies.SQL.dll
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\SQL\obj\Release\BlazorMovies.SQL.pdb

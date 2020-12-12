@@ -1,0 +1,36 @@
+﻿@page "/genre/edit/{GenreId:int}"
+@inject IGenreRepository repoGenre
+@inject NavigationManager nav
+@attribute [Authorize(Roles = "Admin")]
+
+<h3>Edit Genre</h3>
+
+@if (genre != null) {
+    <GenreForm Genre="genre" OnValidSubmit="edit" />
+} else {
+    <text>Loading Genre...</text>
+}
+
+@code {
+    [Parameter] public int GenreId { get; set; }
+
+    protected override async Task OnInitializedAsync() {
+        try {
+            genre = await repoGenre.GetGenre(GenreId);
+        } catch (Exception ex) {
+            // Show popup message, log into DB, send email to developer
+            Console.WriteLine(ex.Message);
+        }
+    }
+
+    private Genre genre;
+    private async Task edit() {
+        try {
+            await repoGenre.UpdateGenre(genre);
+            nav.NavigateTo("genres");
+        } catch (Exception ex) {
+            // Show popup message, log into DB, send email to developer
+            Console.WriteLine(ex.Message);
+        }
+    }
+}

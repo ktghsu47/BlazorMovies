@@ -1,0 +1,5 @@
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\Server\obj\Release\netcoreapp3.1\BlazorMovies.Server.csprojAssemblyReference.cache
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\Server\obj\Release\netcoreapp3.1\BlazorMovies.Server.AssemblyInfoInputs.cache
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\Server\obj\Release\netcoreapp3.1\BlazorMovies.Server.AssemblyInfo.cs
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\Server\obj\Release\netcoreapp3.1\BlazorMovies.Server.csproj.CoreCompileInputs.cache
+C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\Server\obj\Release\netcoreapp3.1\BlazorMovies.Server.MvcApplicationPartsAssemblyInfo.cache

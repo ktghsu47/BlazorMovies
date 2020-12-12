@@ -1,0 +1,3778 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSchemaModel FileFormatVersion="1.2" SchemaVersion="2.9" DspName="Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider" CollationLcid="1033" CollationCaseSensitive="False" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+	<Header>
+		<CustomData Category="AnsiNulls">
+			<Metadata Name="AnsiNulls" Value="True" />
+		</CustomData>
+		<CustomData Category="QuotedIdentifier">
+			<Metadata Name="QuotedIdentifier" Value="True" />
+		</CustomData>
+		<CustomData Category="CompatibilityMode">
+			<Metadata Name="CompatibilityMode" Value="130" />
+		</CustomData>
+		<CustomData Category="Reference" Type="Assembly">
+			<Metadata Name="LogicalName" Value="BlazorMovies.SQL.dll" />
+			<Metadata Name="FileName" Value="C:\MY DOCUMENTS\APPCODES\BLAZORMOVIES\BLAZORMOVIES\SQL\OBJ\DEBUG\BLAZORMOVIES.SQL.DLL" />
+			<Metadata Name="AssemblyName" Value="BlazorMovies.SQL" />
+			<Metadata Name="PermissionSet" Value="SAFE" />
+			<Metadata Name="Owner" Value="" />
+			<Metadata Name="GenerateSqlClrDdl" Value="True" />
+			<Metadata Name="IsVisible" Value="True" />
+			<Metadata Name="IsModelAware" Value="True" />
+			<Metadata Name="SkipCreationIfEmpty" Value="True" />
+			<Metadata Name="AssemblySymbolsName" Value="C:\My Documents\AppCodes\BlazorMovies\BlazorMovies\SQL\obj\Debug\BlazorMovies.SQL.pdb" />
+		</CustomData>
+		<CustomData Category="SqlCmdVariables" Type="SqlCmdVariable" />
+	</Header>
+	<Model>
+		<Element Type="SqlDatabaseOptions">
+			<Property Name="Collation" Value="SQL_Latin1_General_CP1_CI_AS" />
+			<Property Name="IsAnsiNullDefaultOn" Value="True" />
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Property Name="IsAnsiWarningsOn" Value="True" />
+			<Property Name="IsArithAbortOn" Value="True" />
+			<Property Name="IsConcatNullYieldsNullOn" Value="True" />
+			<Property Name="IsTornPageProtectionOn" Value="False" />
+			<Property Name="IsFullTextEnabled" Value="True" />
+			<Property Name="PageVerifyMode" Value="3" />
+			<Property Name="DefaultLanguage" Value="" />
+			<Property Name="DefaultFullTextLanguage" Value="" />
+			<Property Name="QueryStoreStaleQueryThreshold" Value="367" />
+			<Relationship Name="DefaultFilegroup">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[PRIMARY]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlDefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[GETDATE()]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[MovieRatings]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[MovieRatings].[RatingDate]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="3" />
+		</Element>
+		<Element Type="SqlDefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[0]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Movies]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[Movies].[InTheaters]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="4" />
+		</Element>
+		<Element Type="SqlDefaultConstraint">
+			<Property Name="DefaultExpressionScript">
+				<Value><![CDATA[GETDATE()]]></Value>
+			</Property>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Movies]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="ForColumn">
+				<Entry>
+					<References Name="[dbo].[Movies].[ReleaseDate]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="5" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Roles].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Roles]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="6" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[People].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[People]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="7" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[MovieGenres].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[MovieGenres]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="8" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[MovieActors].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[MovieActors]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="9" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[MovieRatings].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[MovieRatings]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="10" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Movies].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Movies]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="11" />
+		</Element>
+		<Element Type="SqlPrimaryKeyConstraint">
+			<Relationship Name="ColumnSpecifications">
+				<Entry>
+					<Element Type="SqlIndexedColumnSpecification">
+						<Relationship Name="Column">
+							<Entry>
+								<References Name="[dbo].[Genres].[Id]" />
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="DefiningTable">
+				<Entry>
+					<References Name="[dbo].[Genres]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="12" />
+		</Element>
+		<Element Type="SqlTableType" Name="[dbo].[BasicUDT]">
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlTableTypeSimpleColumn" Name="[dbo].[BasicUDT].[Name]">
+						<Property Name="IsNullable" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Genres]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Genres].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="12" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Genres].[Name]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[MovieActors]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[MovieActors].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="9" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[MovieActors].[PersonId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[MovieActors].[MovieId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[MovieActors].[Character]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="250" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[MovieActors].[Order]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[MovieGenres]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[MovieGenres].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="8" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[MovieGenres].[MovieId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[MovieGenres].[GenreId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[MovieRatings]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[MovieRatings].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="10" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[MovieRatings].[MovieId]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[MovieRatings].[UserId]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[MovieRatings].[Rate]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[MovieRatings].[RatingDate]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="7" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime2]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="3" />
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Movies]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Movies].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="11" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Movies].[Title]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Movies].[Summary]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Movies].[InTheaters]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="4" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Movies].[Trailer]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Movies].[ReleaseDate]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="7" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime2]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="5" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Movies].[Poster]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[People]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[People].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="7" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[People].[RoleId]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[People].[Email]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="250" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[People].[Password]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[People].[Name]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[People].[Biography]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[People].[Picture]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="250" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[People].[DateOfBirth]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="7" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime2]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Roles]">
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="Columns">
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Roles].[Id]">
+						<Property Name="IsNullable" Value="False" />
+						<Property Name="IsIdentity" Value="True" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="6" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Roles].[Name]">
+						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spGenres_All]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	SET NOCOUNT ON
+
+	SELECT [Id], [Name]
+	FROM dbo.Genres
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Genres]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Genres].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Genres].[Name]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="114" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spGenres_All]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spGenres_Create]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	SET NOCOUNT ON;
+
+	INSERT INTO dbo.[Genres]([Name])
+	VALUES (@Name);
+
+	SET @Id = SCOPE_IDENTITY();
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Genres]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Genres].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spGenres_Create].[@Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spGenres_Create].[@Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGenres_Create].[@Name]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGenres_Create].[@Id]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="202" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spGenres_Create]&#xD;&#xA;&#x9;@Name NVARCHAR(50),&#xD;&#xA;&#x9;@Id INT OUTPUT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spGenres_Delete]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	SET NOCOUNT ON;
+
+	DECLARE @ERROR INT
+	SET TRANSACTION ISOLATION LEVEL REPEATABLE READ
+	BEGIN TRANSACTION
+
+	DELETE FROM dbo.[MovieGenres]
+	WHERE GenreId = @Id;
+
+	SELECT @ERROR = @@ERROR
+	IF (@ERROR <> 0) BEGIN
+		ROLLBACK TRANSACTION
+	END
+
+	DELETE
+	FROM dbo.[Genres]
+	WHERE Id = @Id
+
+	SELECT @ERROR = @@ERROR
+	IF (@ERROR <> 0) BEGIN
+		ROLLBACK TRANSACTION
+	END ELSE BEGIN
+		COMMIT TRANSACTION
+	END
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieGenres]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieGenres].[GenreId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spGenres_Delete].[@Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Genres]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Genres].[Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGenres_Delete].[@Id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="489" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spGenres_Delete]&#xD;&#xA;&#x9;@Id INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spGenres_GetById]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN	
+	SET NOCOUNT ON;
+
+	SELECT [Id], [Name]
+	FROM dbo.[Genres]
+	WHERE Id = @Id;
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Genres]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Genres].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Genres].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spGenres_GetById].[@Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGenres_GetById].[@Id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="150" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spGenres_GetById]&#xD;&#xA;&#x9;@Id INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spGenres_Update]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	SET NOCOUNT ON;
+
+	UPDATE dbo.[Genres] SET
+		Name = @Name
+	WHERE Id = @Id;
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Genres]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Genres].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spGenres_Update].[@Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Genres].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spGenres_Update].[@Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGenres_Update].[@Id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spGenres_Update].[@Name]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="170" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spGenres_Update]&#xD;&#xA;&#x9;@Id INT,&#xD;&#xA;&#x9;@Name NVARCHAR(50)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spMovieActors_Create]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	SET NOCOUNT ON;
+
+	INSERT INTO dbo.[MovieActors](PersonId, MovieId, [Character], [Order])
+	VALUES (@PersonId, @MovieId, @Character, @Order)
+
+	SET @Id = SCOPE_IDENTITY();
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[MovieActors]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieActors].[PersonId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieActors].[MovieId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieActors].[Character]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieActors].[Order]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovieActors_Create].[@PersonId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovieActors_Create].[@MovieId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovieActors_Create].[@Character]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovieActors_Create].[@Order]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovieActors_Create].[@Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovieActors_Create].[@PersonId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovieActors_Create].[@MovieId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovieActors_Create].[@Character]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="250" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovieActors_Create].[@Order]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovieActors_Create].[@Id]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="331" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spMovieActors_Create]&#xD;&#xA;&#x9;@PersonId INT,&#xD;&#xA;&#x9;@MovieId INT,&#xD;&#xA;&#x9;@Character NVARCHAR(250),&#xD;&#xA;&#x9;@Order INT,&#xD;&#xA;&#x9;@Id INT OUTPUT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spMovieGenres_Create]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	SET NOCOUNT ON;
+
+	INSERT INTO dbo.[MovieGenres](GenreId, MovieId)
+	VALUES (@GenreId, @MovieId)
+
+	SET @Id = SCOPE_IDENTITY();
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[MovieGenres]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieGenres].[GenreId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieGenres].[MovieId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovieGenres_Create].[@GenreId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovieGenres_Create].[@MovieId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovieGenres_Create].[@Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovieGenres_Create].[@GenreId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovieGenres_Create].[@MovieId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovieGenres_Create].[@Id]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="244" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spMovieGenres_Create]&#xD;&#xA;&#x9;@GenreId INT,&#xD;&#xA;&#x9;@MovieId INT,&#xD;&#xA;&#x9;@Id INT OUTPUT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spMovieRatings_Create]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	SET NOCOUNT ON;
+
+	INSERT INTO dbo.[MovieRatings](MovieId, UserId, Rate)
+	VALUES (@MovieId, @UserId, @Rate);
+
+	SET @Id = SCOPE_IDENTITY();
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[MovieRatings]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieRatings].[MovieId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieRatings].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieRatings].[Rate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovieRatings_Create].[@MovieId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovieRatings_Create].[@UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovieRatings_Create].[@Rate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovieRatings_Create].[@Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovieRatings_Create].[@MovieId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovieRatings_Create].[@UserId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovieRatings_Create].[@Rate]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovieRatings_Create].[@Id]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="270" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spMovieRatings_Create]&#xD;&#xA;&#x9;@MovieId INT,&#xD;&#xA;&#x9;@UserId INT,&#xD;&#xA;&#x9;@Rate INT,&#xD;&#xA;&#x9;@Id INT OUTPUT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spMovieRatings_GetAverage]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	SET NOCOUNT ON;
+
+	IF EXISTS (SELECT * FROM dbo.MovieRatings WHERE MovieId = @MovieId) BEGIN
+		SELECT AVG(Rate) AS AverageRate
+		FROM dbo.MovieRatings
+		WHERE MovieId = @MovieId
+	END ELSE BEGIN
+		SELECT 0 AS AverageRate
+	END
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[MovieRatings]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieRatings].[MovieId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovieRatings_GetAverage].[@MovieId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieRatings].[Rate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieRatings].[MovieId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovieRatings_GetAverage].[@MovieId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="317" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spMovieRatings_GetAverage]&#xD;&#xA;&#x9;@MovieId INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spMovieRatings_GetUserRate]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT [Id], [MovieId], [UserId], [Rate], [RatingDate]
+	FROM dbo.MovieRatings
+	WHERE UserId = @UserId AND MovieId = @MovieId
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[MovieRatings]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieRatings].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieRatings].[MovieId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieRatings].[UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieRatings].[Rate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieRatings].[RatingDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovieRatings_GetUserRate].[@UserId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovieRatings_GetUserRate].[@MovieId]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovieRatings_GetUserRate].[@UserId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovieRatings_GetUserRate].[@MovieId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="248" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spMovieRatings_GetUserRate]&#xD;&#xA;&#x9;@UserId INT,&#xD;&#xA;&#x9;@MovieId INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spMovieRatings_Update]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	SET NOCOUNT ON;
+
+	UPDATE dbo.[MovieRatings] SET
+		Rate = @Rate
+	WHERE Id = @Id;
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[MovieRatings]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieRatings].[Rate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovieRatings_Update].[@Rate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieRatings].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovieRatings_Update].[@Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovieRatings_Update].[@Id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovieRatings_Update].[@Rate]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="173" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spMovieRatings_Update]&#xD;&#xA;&#x9;@Id INT,&#xD;&#xA;&#x9;@Rate INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spMovies_All]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	SET NOCOUNT ON
+
+	SELECT [Id], [Title], [Summary], [InTheaters], [Trailer], [ReleaseDate], [Poster]
+	FROM dbo.Movies
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Movies]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Title]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Summary]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[InTheaters]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Trailer]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[ReleaseDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Poster]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="176" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spMovies_All]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spMovies_Create]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	SET NOCOUNT ON;
+
+	INSERT INTO dbo.[Movies](Title, Summary, InTheaters, Trailer, Poster)
+	VALUES (@Title, @Summary, @InTheaters, @Trailer, @Poster);
+
+	SET @Id = SCOPE_IDENTITY();
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Movies]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Title]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Summary]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[InTheaters]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Trailer]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Poster]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovies_Create].[@Title]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovies_Create].[@Summary]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovies_Create].[@InTheaters]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovies_Create].[@Trailer]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovies_Create].[@Poster]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovies_Create].[@Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovies_Create].[@Title]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovies_Create].[@Summary]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovies_Create].[@InTheaters]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovies_Create].[@Trailer]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovies_Create].[@Poster]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovies_Create].[@Id]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="379" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spMovies_Create]&#xD;&#xA;&#x9;@Title NVARCHAR(50),&#xD;&#xA;&#x9;@Summary NVARCHAR(MAX),&#xD;&#xA;&#x9;@InTheaters BIT,&#xD;&#xA;&#x9;@Trailer NVARCHAR(MAX),&#xD;&#xA;&#x9;@Poster NVARCHAR(MAX),&#xD;&#xA;&#x9;@Id INT OUTPUT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spMovies_Delete]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	SET NOCOUNT ON;
+
+	DECLARE @ERROR INT
+	SET TRANSACTION ISOLATION LEVEL REPEATABLE READ
+	BEGIN TRANSACTION
+
+	DELETE FROM dbo.[MovieActors]
+	WHERE MovieId = @Id;
+
+	SELECT @ERROR = @@ERROR
+	IF (@ERROR <> 0) BEGIN
+		ROLLBACK TRANSACTION
+	END
+
+	DELETE FROM dbo.[MovieGenres]
+	WHERE MovieId = @Id;
+
+	SELECT @ERROR = @@ERROR
+	IF (@ERROR <> 0) BEGIN
+		ROLLBACK TRANSACTION
+	END
+
+	DELETE FROM dbo.[MovieRatings]
+	WHERE MovieId = @Id;
+
+	SELECT @ERROR = @@ERROR
+	IF (@ERROR <> 0) BEGIN
+		ROLLBACK TRANSACTION
+	END
+
+	DELETE FROM dbo.[Movies]
+	WHERE Id = @Id;
+
+	SELECT @ERROR = @@ERROR
+	IF (@ERROR <> 0) BEGIN
+		ROLLBACK TRANSACTION
+	END ELSE BEGIN
+		COMMIT TRANSACTION
+	END
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[int]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieActors]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieActors].[MovieId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovies_Delete].[@Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieGenres]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieGenres].[MovieId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieRatings]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieRatings].[MovieId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovies_Delete].[@Id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="769" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spMovies_Delete]&#xD;&#xA;&#x9;@Id INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spMovies_GetActorsByMovieId]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT a.[Id], a.[RoleId], a.[Email], a.[Password], a.[Name], a.[Biography], a.[Picture], 
+		a.[DateOfBirth], b.[Character]
+	FROM dbo.People a JOIN
+		dbo.MovieActors b  ON b.PersonId = a.Id	
+	WHERE b.MovieId = @Id
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[People]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieActors]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieActors].[PersonId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[RoleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Biography]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Picture]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[DateOfBirth]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieActors].[Character]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieActors].[MovieId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovies_GetActorsByMovieId].[@Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovies_GetActorsByMovieId].[@Id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="320" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spMovies_GetActorsByMovieId]&#xD;&#xA;&#x9;@Id INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spMovies_GetById]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN	
+	SET NOCOUNT ON;
+
+	SELECT [Id], [Title], [Summary], [InTheaters], [Trailer], [ReleaseDate], [Poster]
+	FROM dbo.Movies
+	WHERE Id = @Id
+
+	SELECT [Id], [MovieId], [GenreId] 
+	FROM dbo.MovieGenres
+	WHERE MovieId = @Id
+
+	SELECT [Id], [PersonId], [MovieId], [Character], [Order] 
+	FROM dbo.MovieActors
+	WHERE MovieId = @Id
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Movies]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Title]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Summary]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[InTheaters]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Trailer]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[ReleaseDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Poster]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovies_GetById].[@Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieGenres]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieGenres].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieGenres].[MovieId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieGenres].[GenreId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieActors]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieActors].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieActors].[PersonId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieActors].[MovieId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieActors].[Character]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieActors].[Order]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovies_GetById].[@Id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="400" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spMovies_GetById]&#xD;&#xA;&#x9;@Id INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spMovies_GetGenresByMovieId]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT b.Id, b.[Name]
+	FROM dbo.MovieGenres a JOIN
+		dbo.Genres b ON a.GenreId = b.Id
+	WHERE a.MovieId = @Id
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[MovieGenres]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Genres]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieGenres].[GenreId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Genres].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Genres].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieGenres].[MovieId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovies_GetGenresByMovieId].[@Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovies_GetGenresByMovieId].[@Id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="214" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spMovies_GetGenresByMovieId]&#xD;&#xA;&#x9;@Id INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spMovies_InTheaters]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT TOP (@Limit) [Id], [Title], [Summary], [InTheaters], [Trailer], [ReleaseDate], [Poster]
+	FROM dbo.Movies
+	WHERE InTheaters > 0
+	ORDER BY ReleaseDate DESC
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Movies]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovies_InTheaters].[@Limit]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Title]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Summary]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[InTheaters]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Trailer]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[ReleaseDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Poster]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovies_InTheaters].[@Limit]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="261" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spMovies_InTheaters]&#xD;&#xA;&#x9;@Limit INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spMovies_Upcoming]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT TOP (@Limit) [Id], [Title], [Summary], [InTheaters], [Trailer], [ReleaseDate], [Poster]
+	FROM dbo.Movies
+	WHERE ReleaseDate > GETDATE()
+	ORDER BY ReleaseDate
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Movies]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovies_Upcoming].[@Limit]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Title]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Summary]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[InTheaters]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Trailer]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[ReleaseDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Poster]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovies_Upcoming].[@Limit]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="263" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spMovies_Upcoming]&#xD;&#xA;&#x9;@Limit INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spMovies_Update]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	SET NOCOUNT ON;
+
+	UPDATE dbo.[Movies] SET
+		Title = @Title,
+		Summary = @Summary,
+		InTheaters = @InTheaters,
+		Trailer = @Trailer,
+		ReleaseDate = @ReleaseDate,
+		Poster = @Poster
+	WHERE Id = @Id;
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Movies]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Title]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovies_Update].[@Title]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Summary]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovies_Update].[@Summary]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[InTheaters]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovies_Update].[@InTheaters]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Trailer]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovies_Update].[@Trailer]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[ReleaseDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovies_Update].[@ReleaseDate]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Poster]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovies_Update].[@Poster]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Movies].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spMovies_Update].[@Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovies_Update].[@Id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovies_Update].[@Title]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovies_Update].[@Summary]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovies_Update].[@InTheaters]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[bit]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovies_Update].[@Trailer]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovies_Update].[@ReleaseDate]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="7" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime2]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spMovies_Update].[@Poster]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="422" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spMovies_Update]&#xD;&#xA;&#x9;@Id INT,&#xD;&#xA;&#x9;@Title NVARCHAR(50),&#xD;&#xA;&#x9;@Summary NVARCHAR(MAX),&#xD;&#xA;&#x9;@InTheaters BIT,&#xD;&#xA;&#x9;@Trailer NVARCHAR(MAX),&#xD;&#xA;&#x9;@ReleaseDate DATETIME2,&#xD;&#xA;&#x9;@Poster NVARCHAR(MAX)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spRoles_All]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	SET NOCOUNT ON
+
+	SELECT [Id], [Name]
+	FROM dbo.Roles
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Roles]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Roles].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Roles].[Name]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="112" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spRoles_All]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spRoles_Create]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	SET NOCOUNT ON;
+
+	UPDATE dbo.[People] SET
+		RoleId = (SELECT Id FROM Roles WHERE Name = @RoleName)
+	WHERE Id = @Id;
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[People]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[RoleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Roles]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Roles].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Roles].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spRoles_Create].[@RoleName]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spRoles_Create].[@Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spRoles_Create].[@Id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spRoles_Create].[@RoleName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="215" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spRoles_Create]&#xD;&#xA;&#x9;@Id INT,&#xD;&#xA;&#x9;@RoleName NVARCHAR(50)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spRoles_Delete]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	SET NOCOUNT ON;
+
+	UPDATE dbo.[People] SET
+		RoleId = NULL
+	WHERE Id = @Id;
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[People]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[RoleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spRoles_Delete].[@Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spRoles_Delete].[@Id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spRoles_Delete].[@RoleName]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="174" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spRoles_Delete]&#xD;&#xA;&#x9;@Id INT,&#xD;&#xA;&#x9;@RoleName NVARCHAR(50)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spUsers_All]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+BEGIN
+	SET NOCOUNT ON
+
+	SELECT [Id], [RoleId], [Email], [Password], [Name], [Biography], [Picture], [DateOfBirth]
+	FROM dbo.People
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[People]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[RoleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Biography]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Picture]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[DateOfBirth]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="181" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spUsers_All]&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spUsers_Create]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	SET NOCOUNT ON;
+
+	INSERT INTO dbo.[People](RoleId, Email, [Password], [Name], Biography, Picture, DateOfBirth)
+	VALUES (@RoleId, @Email, @Password, @Name, @Biography, @Picture, @DateOfBirth);
+
+	SET @Id = SCOPE_IDENTITY();
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[People]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[RoleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Biography]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Picture]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[DateOfBirth]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUsers_Create].[@RoleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUsers_Create].[@Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUsers_Create].[@Password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUsers_Create].[@Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUsers_Create].[@Biography]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUsers_Create].[@Picture]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUsers_Create].[@DateOfBirth]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUsers_Create].[@Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUsers_Create].[@RoleId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUsers_Create].[@Email]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="250" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUsers_Create].[@Password]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUsers_Create].[@Name]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUsers_Create].[@Biography]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUsers_Create].[@Picture]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="250" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUsers_Create].[@DateOfBirth]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="7" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime2]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUsers_Create].[@Id]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="471" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spUsers_Create]&#xD;&#xA;&#x9;@RoleId INT,&#xD;&#xA;&#x9;@Email NVARCHAR(250),&#xD;&#xA;&#x9;@Password NVARCHAR(100),&#xD;&#xA;&#x9;@Name NVARCHAR(50),&#xD;&#xA;&#x9;@Biography NVARCHAR(MAX),&#xD;&#xA;&#x9;@Picture NVARCHAR(250),&#xD;&#xA;&#x9;@DateOfBirth DATETIME2,&#xD;&#xA;&#x9;@Id INT OUTPUT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spUsers_Delete]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	SET NOCOUNT ON;
+
+	DELETE FROM dbo.[People]
+	WHERE Id = @Id;
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[People]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUsers_Delete].[@Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUsers_Delete].[@Id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="132" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spUsers_Delete]&#xD;&#xA;&#x9;@Id INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spUsers_GetById]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN	
+	SET NOCOUNT ON;
+
+	SELECT p.Id, RoleId, Email, [Password], p.[Name], Biography, Picture, DateOfBirth, r.[Name] AS RoleName
+	FROM dbo.People p JOIN
+		dbo.Roles r ON p.RoleId = r.Id
+	WHERE p.Id = @Id
+
+	SELECT [Id], [PersonId], [MovieId], [Character], [Order]
+	FROM dbo.MovieActors
+	WHERE PersonId = @Id
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[People]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Roles]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[RoleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Roles].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[RoleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Biography]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Picture]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[DateOfBirth]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Roles].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUsers_GetById].[@Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieActors]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieActors].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieActors].[PersonId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieActors].[MovieId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieActors].[Character]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[MovieActors].[Order]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUsers_GetById].[@Id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="380" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spUsers_GetById]&#xD;&#xA;&#x9;@Id INT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spUsers_Login]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT p.[Id], p.[RoleId], p.[Email], p.[Password], p.[Name], p.[Biography], p.[Picture],
+		p.[DateOfBirth], r.[Name] AS RoleName
+	FROM dbo.[People] p JOIN
+		dbo.[Roles] r ON p.RoleId = r.Id
+	WHERE p.Email = @Email
+		AND p.[Password] = @Password
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[People]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Roles]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[RoleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Roles].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Biography]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Picture]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[DateOfBirth]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Roles].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUsers_Login].[@Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUsers_Login].[@Password]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUsers_Login].[@Email]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="250" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUsers_Login].[@Password]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="379" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spUsers_Login]&#xD;&#xA;&#x9;@Email NVARCHAR(250),&#xD;&#xA;&#x9;@Password NVARCHAR(100)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spUsers_Register]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	SET NOCOUNT ON;
+
+	INSERT INTO dbo.[People](RoleId, Email, [Password])
+	VALUES (2, @Email, @Password);
+
+	SET @Id = SCOPE_IDENTITY();
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[People]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[RoleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUsers_Register].[@Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUsers_Register].[@Password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUsers_Register].[@Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUsers_Register].[@Email]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="250" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUsers_Register].[@Password]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUsers_Register].[@Id]">
+						<Property Name="IsOutput" Value="True" />
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="266" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spUsers_Register]&#xD;&#xA;&#x9;@Email NVARCHAR(250),&#xD;&#xA;&#x9;@Password NVARCHAR(100),&#xD;&#xA;&#x9;@Id INT OUTPUT&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spUsers_Search]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	SET NOCOUNT ON;
+
+	SELECT TOP (@Limit) [Id], [RoleId], [Email], [Password], [Name], [Biography], [Picture], [DateOfBirth]
+	FROM dbo.People
+	WHERE [Name] LIKE '%'+@SearchText+'%'
+	ORDER BY [Name]
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[People]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUsers_Search].[@Limit]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[RoleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Biography]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Picture]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[DateOfBirth]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUsers_Search].[@SearchText]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUsers_Search].[@Limit]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUsers_Search].[@SearchText]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="299" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spUsers_Search]&#xD;&#xA;&#x9;@Limit INT,&#xD;&#xA;&#x9;@SearchText NVARCHAR(50)&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[spUsers_Update]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+
+BEGIN
+	SET NOCOUNT ON;
+
+	UPDATE dbo.[People] SET
+		RoleId = @RoleId,
+		Email = @Email,
+		[Password] = @Password,
+		[Name] = @Name,
+		Biography = @Biography,
+		Picture = @Picture,
+		DateOfBirth = @DateOfBirth
+	WHERE Id = @Id;
+END]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[People]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[RoleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUsers_Update].[@RoleId]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUsers_Update].[@Email]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUsers_Update].[@Password]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUsers_Update].[@Name]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Biography]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUsers_Update].[@Biography]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Picture]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUsers_Update].[@Picture]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[DateOfBirth]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUsers_Update].[@DateOfBirth]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[People].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spUsers_Update].[@Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUsers_Update].[@Id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUsers_Update].[@RoleId]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUsers_Update].[@Email]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="250" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUsers_Update].[@Password]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="100" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUsers_Update].[@Name]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Length" Value="50" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUsers_Update].[@Biography]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUsers_Update].[@Picture]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="IsMax" Value="True" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[nvarchar]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spUsers_Update].[@DateOfBirth]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Property Name="Scale" Value="7" />
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[datetime2]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="465" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spUsers_Update]&#xD;&#xA;&#x9;@Id INT,&#xD;&#xA;&#x9;@RoleId INT,&#xD;&#xA;&#x9;@Email NVARCHAR(250),&#xD;&#xA;&#x9;@Password NVARCHAR(100),&#xD;&#xA;&#x9;@Name NVARCHAR(50),&#xD;&#xA;&#x9;@Biography NVARCHAR(MAX),&#xD;&#xA;&#x9;@Picture NVARCHAR(MAX),&#xD;&#xA;&#x9;@DateOfBirth DATETIME2&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+	</Model>
+</DataSchemaModel>

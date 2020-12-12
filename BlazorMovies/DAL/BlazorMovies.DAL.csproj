@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+	  <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Data\IRoleData.cs" />
+    <Compile Remove="Data\RoleData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.35" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="2.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.9" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\BlazorMovies.Shared.csproj" />
+  </ItemGroup>
+</Project>

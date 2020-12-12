@@ -1,0 +1,44 @@
+﻿@inject IJSRuntime js
+@inject IMovieRepository repoMovie
+
+<div class="movies-container">
+    <GenericList List="Movies">
+        <ElementTemplate Context="movie">
+            <IndividualMovie Movie="movie" DeleteMovie="deleteMovie" @key="movie.Id" />
+        </ElementTemplate>
+    </GenericList>
+</div>
+
+<Confirmation @ref="confirmation" OnCancel="onCancel" OnConfirm="onConfirm" Title="Please Confirm">
+    <div>Do you wish to delete @movieToBeDeleted.Title?</div>
+</Confirmation>
+
+@code {
+    Confirmation confirmation;
+    private Movie movieToBeDeleted;
+    [Parameter] public List<Movie> Movies { get; set; }
+
+    private void deleteMovie(Movie movie) {
+        movieToBeDeleted = movie;
+        confirmation.Show();
+        //await js.MyFunction("custom message");
+        //var confirmed = await js.Confirm($"Are you sure you want to delete {movie.Title}?");
+
+        //if (confirmed) {
+        //    await repoMovie.DeleteMovie(movie.Id);
+        //    Movies.Remove(movie);
+        //}
+    }
+
+    private async Task onConfirm() {
+        await repoMovie.DeleteMovie(movieToBeDeleted.Id);
+        Movies.Remove(movieToBeDeleted);
+        confirmation.Hide();
+        movieToBeDeleted = null;
+    }
+
+    void onCancel() {
+        confirmation.Hide();
+        movieToBeDeleted = null;
+    }
+}

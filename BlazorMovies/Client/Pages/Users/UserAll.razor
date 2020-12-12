@@ -1,0 +1,54 @@
+﻿@page "/users"
+@inject IUserRepository iUser
+@attribute [Authorize(Roles = "Admin")]
+
+<h3>User List</h3>
+
+<GenericList List="UserDTOs">
+    <WholeListTemplate>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>User</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var user in UserDTOs) {
+                    <tr>
+                        <td>
+                            <a href="/users/edit/@user.UserId" class="btn btn-success">Edit</a>
+                        </td>
+                        <td>
+                            @user.Email
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </WholeListTemplate>
+</GenericList>
+
+<Pagination CurrentPage="@PageNumberSizeDTO.PageNumber" SelectedPage="selectedPage" TotalAmountPages="PageTotal"></Pagination>
+
+@code {
+    List<UserDTO> UserDTOs;
+    PageNumberSizeDTO PageNumberSizeDTO = new PageNumberSizeDTO();
+    int PageTotal;
+
+    protected override async Task OnInitializedAsync() {
+        await loadUsers();
+    }
+
+    private async Task selectedPage(int pageNumber) {
+        PageNumberSizeDTO.PageNumber = pageNumber;
+        await loadUsers();
+    }
+
+    private async Task loadUsers() {
+        var pagingDTO = await iUser.GetUsers(PageNumberSizeDTO);
+
+        UserDTOs = pagingDTO.Response;
+        PageTotal = pagingDTO.PageTotal;
+    }
+}
